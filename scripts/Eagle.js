@@ -10,10 +10,12 @@ function Eagle()
 
 	eagleImg = new Image();
 
+	daEagle = this;
+
 	eagleImg.onload = function()
 	{
 		console.log(eagleImg);
-		this.context.drawImage(this.eagleImg, 0, 0);
+		daEagle.context.drawImage(eagleImg, 0, 0);
 		//document.body.appendChild(eagleImg);
 	}
 
