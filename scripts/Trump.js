@@ -4,7 +4,7 @@ function Trump()
 	this.scale    = {x:200, y:game.height - 20};
 	this.maxDelusion = 99999;
 	this.delusion = this.maxDelusion;
-	this.damage   = 1;
+	this.damage   = 10;
 	this.special  = 200;
 	this.angle    = 0;
 
