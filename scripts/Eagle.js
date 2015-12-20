@@ -9,9 +9,13 @@ function Eagle()
 	this.context = this.canvas.getContext('2d');
 
 	this.eagleImg = new Image();
-	this.eagleImg.src = '../ouch.png';
+	
+	this.eagleImg.onload = function()
+	{
+		this.context.drawImage(this.eagleImg, 0, 0);
+	}
 
-	this.context.drawImage(this.eagleImg, 0, 0);
+	this.eagleImg.src = 'eagle.png';
 
 	this.make = false;
 	this.down = true;
@@ -21,7 +25,7 @@ Eagle.prototype.draw = function()
 {
 	if(this.make == true)
 	{
-		context.drawImage(this.eagleImg, this.point.x, this.point.y);
+		context.drawImage(this.canvas, this.point.x, this.point.y);
 	}
 };
 
