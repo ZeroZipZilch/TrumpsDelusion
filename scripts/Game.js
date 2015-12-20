@@ -115,7 +115,7 @@ Game.prototype.preLoadImages = function()
     isOpera = window.navigator.userAgent.indexOf("OPR") > -1,
     isIEedge = window.navigator.userAgent.indexOf("Edge") > -1;
 
-	if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false)
+	if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false && isCanvasSupported())
 	{
 		context.fillStyle = "#fafafa";
 		context.fillRect(0,0,canvas.width,canvas.height);
@@ -157,4 +157,10 @@ Game.prototype.preLoadImages = function()
 		context.fillText("HTML 5 canvas relatively well, we decided to drop support for all other browsers.", canvas.width/2, canvas.height/2 + 20);
 
 	}
+}
+
+Game.prototype.isCanvasSupported = function()
+{
+	var elem = document.createElement('canvas');
+	return !!(elem.getContext && elem.getContext('2d'));
 }
