@@ -132,7 +132,6 @@ Game.prototype.preLoadImages = function()
 
 		for(i = 0;i < images.length;i++)
 		{
-			console.log(loadingImages);
 			loadingImages.push(new Image());
 			
 			loadingImages[i].onload = function()
