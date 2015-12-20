@@ -125,7 +125,7 @@ Game.prototype.preLoadImages = function()
     isOpera = window.navigator.userAgent.indexOf("OPR") > -1,
     isIEedge = window.navigator.userAgent.indexOf("Edge") > -1;
 
-	if(isChrome && this.isCanvasSupported())
+	if(isChrome)
 	{
 		context.fillStyle = "#fafafa";
 		context.fillRect(0,0,canvas.width,canvas.height);
@@ -166,6 +166,11 @@ Game.prototype.preLoadImages = function()
 		context.fillText("Sorry... Due to Google Chrome being the only cool browser that handles", canvas.width/2, canvas.height/2);
 		context.fillText("HTML 5 canvas relatively well, we decided to drop support for all other browsers.", canvas.width/2, canvas.height/2 + 20);
 
+	}
+
+	if(!this.isCanvasSupported())
+	{
+		$("#noSupport").show();
 	}
 }
 
