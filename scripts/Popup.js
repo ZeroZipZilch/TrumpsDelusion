@@ -104,7 +104,7 @@ Popup.prototype.fullTwoColumns = function()
 			else
 				lineheight += 40;
 
-			context.fillText(this.phraseArray2[i], game.width / 2 + 40, lineheight + 150);
+			context.fillText(this.phraseArray2[i], game.width / 2 + 40, lineheight + 50);
 		}
 
 		if(lineheight > maxLineheight)
