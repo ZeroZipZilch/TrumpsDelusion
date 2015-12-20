@@ -128,7 +128,7 @@ Argument.prototype.translate = function(cx, cy, x, y, theta)
 	x = rotatedX + cx;
 	y = rotatedY + cy;
 
-	return {x, y};
+	return {x:x, y:y};
 };
 
 Argument.prototype.update = function(dt)
