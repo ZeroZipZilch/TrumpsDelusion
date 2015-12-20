@@ -110,7 +110,7 @@ Popup.prototype.fullTwoColumns = function()
 		if(lineheight > maxLineheight)
 			maxLineheight = lineheight;
 
-		context.moveTo(game.width/2, 150);
+		context.moveTo(game.width/2, 50);
 		context.lineTo(game.width/2, maxLineheight + 170);
 		context.strokeStyle = "#fafafa";
 		context.stroke();
