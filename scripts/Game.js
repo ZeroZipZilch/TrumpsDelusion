@@ -117,7 +117,8 @@ Game.prototype.preLoadImages = function()
 	// At least Safari 3+: "[object HTMLElementConstructor]"
 	var isChrome = !!window.chrome && !isOpera && !isSafari;              // Chrome 1+
 	var isIE = /*@cc_on!@*/false || !!document.documentMode; // At least IE6
-    
+    var isChrome = !!(window.chrome && chrome.webstore);
+
     canvas.width = game.width;
     canvas.height = game.height;
 
