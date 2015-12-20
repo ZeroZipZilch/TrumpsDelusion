@@ -16,7 +16,7 @@ function Eagle()
 		this.context.drawImage(this.eagleImg, 0, 0);
 	}
 
-	this.eagleImg.src = '/eagle.png';
+	this.eagleImg.src = 'http://trump.valiant.ninja/eagle.png';
 
 	this.make = false;
 	this.down = true;
