@@ -23,21 +23,7 @@
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     
-    <script src="/scripts/variables.js"></script>
-
-    <script src="/scripts/Input.js"></script>  
-    <script src="/scripts/Player.js"></script>
-    <script src="/scripts/Platform.js"></script>
-    <script src="/scripts/Game.js"></script> 
-    <script src="/scripts/Trump.js"></script> 
-    <script src="/scripts/Argument.js"></script> 
-    <script src="/scripts/UI.js"></script> 
-    <script src="/scripts/Popup.js"></script> 
-    <script src="/scripts/Eagle.js"></script> 
-
-    <script src="/scripts/classes.js"></script>
-
-    <script> 
+    <script>
       $(function()
       {  
 
@@ -50,23 +36,17 @@
           // Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
         var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
         var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-        console.log(isSafari);
+        
         // At least Safari 3+: "[object HTMLElementConstructor]"
         var isChrome = !!window.chrome && !isOpera && !isSafari;              // Chrome 1+
         var isIE = /*@cc_on!@*/false || !!document.documentMode; // At least IE6
-          var isChrome = !!(window.chrome && chrome.webstore);
+        var isChrome = !!(window.chrome && chrome.webstore);
 
-          canvas.width = game.width;
-          canvas.height = game.height;
-
-        var isChromium = window.chrome,
-          vendorName = window.navigator.vendor,
-          isOpera = window.navigator.userAgent.indexOf("OPR") > -1,
-          isIEedge = window.navigator.userAgent.indexOf("Edge") > -1;
+        canvas.width = $(document).width();
+        canvas.height = $(document).height();
 
         if(isChrome)
         {
-          game.preLoadImages();
         }
         else if(!isSafari)
         { 
@@ -89,6 +69,42 @@
         if(!isCanvasSupported())
         {
           $("#noSupport").show();
+        }
+    });
+    </script>
+
+    <script src="/scripts/variables.js"></script>
+
+    <script src="/scripts/Input.js"></script>  
+    <script src="/scripts/Player.js"></script>
+    <script src="/scripts/Platform.js"></script>
+    <script src="/scripts/Game.js"></script> 
+    <script src="/scripts/Trump.js"></script> 
+    <script src="/scripts/Argument.js"></script> 
+    <script src="/scripts/UI.js"></script> 
+    <script src="/scripts/Popup.js"></script> 
+    <script src="/scripts/Eagle.js"></script> 
+
+    <script src="/scripts/classes.js"></script>
+
+    <script> 
+      $(function()
+      {    
+        var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+          // Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
+        var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+        
+        // At least Safari 3+: "[object HTMLElementConstructor]"
+        var isChrome = !!window.chrome && !isOpera && !isSafari;              // Chrome 1+
+       
+        //var isChrome = !!(window.chrome && chrome.webstore);
+
+          canvas.width = game.width;
+          canvas.height = game.height;
+
+        if(isChrome)
+        {
+          game.preLoadImages();
         }
     });
     </script>
