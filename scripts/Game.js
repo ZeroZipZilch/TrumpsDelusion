@@ -118,7 +118,7 @@ Game.prototype.preLoadImages = function()
 	context.textBaseLine = 'middle';
 	context.fillText("Loading game...", canvas.width/2, canvas.height/2);
 
-	images = ['/pending.png', '/shoot.png', '/ouch.png', '/toupe.png', '/confFlag.jpg', '/mericanFlag.jpg'];
+	images = ['/eagle.png', '/pending.png', '/shoot.png', '/ouch.png', '/toupe.png', '/confFlag.jpg', '/mericanFlag.jpg'];
 	loadingImages = [];
 	loadedImages = 0;
 
