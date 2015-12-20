@@ -11,7 +11,7 @@ function Eagle()
 	this.eagleImg = new Image();
 	this.eagleImg.src = '/eagle.png';
 
-	this.context.fillrect(0,0,this.scale.x,this.scale.y);
+	this.context.fillRect(0,0,this.scale.x,this.scale.y);
 	this.context.drawImage(this.eagleImg, 0, 0);
 
 	this.make = false;
