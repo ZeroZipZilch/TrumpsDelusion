@@ -9,7 +9,7 @@ function Eagle()
 	this.context = this.canvas.getContext('2d');
 
 	this.eagleImg = new Image();
-	this.eagleImg.src = '/eagle.png';
+	this.eagleImg.src = '/ouch.png';
 
 	this.context.drawImage(this.eagleImg, 0, 0);
 
