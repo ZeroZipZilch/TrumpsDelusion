@@ -68,6 +68,7 @@ Trump.prototype.draw = function()
 
 	//Head
 	context.beginPath();
+	console.log(this.face);
 
 	if(this.face == 'pending')
 	{
