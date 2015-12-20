@@ -46,6 +46,7 @@
 
         canvas.width = $(document).width();
         canvas.height = $(document).height();
+        console.log(canvas.width);
 
         if(isChrome)
         {
@@ -98,9 +99,6 @@
         var isChrome = !!window.chrome && !isOpera && !isSafari;              // Chrome 1+
        
         //var isChrome = !!(window.chrome && chrome.webstore);
-
-          canvas.width = game.width;
-          canvas.height = game.height;
 
         if(isChrome)
         {
