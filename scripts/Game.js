@@ -104,3 +104,17 @@ Game.prototype.makeBase = function()
     	"base"
     ));
 }
+
+Game.prototype.preLoadImages = function()
+{
+	context.textAlign = 'center';
+	context.textBaseLine = 'middle';
+	context.fillText("Loading game...", canvas.width/2, canvas.height/2);
+	
+	images = ['/pending.png', '/shoot.png', '/ouch.png', '/toupe.png', '/confFlag.png', '/mericanFlag.png'];
+
+	for(i = 0;i < images.length;i++)
+		(new Image()).src = images[i];
+
+	this.init();
+}

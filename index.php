@@ -36,7 +36,7 @@
     <script> 
       $(function()
       {  
-        game.init();
+        game.preLoadImages();
       });
     </script>
   </body>
