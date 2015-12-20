@@ -88,7 +88,7 @@ Popup.prototype.fullTwoColumns = function()
 			else
 				lineheight += 40;
 
-			context.fillText(this.phraseArray1[i], game.width/2 - 320, lineheight + 150);
+			context.fillText(this.phraseArray1[i], game.width/2 - 320, lineheight + 50);
 		}
 
 		this.phraseArray2 = this.getLines(context, this.phrase2, 300)
