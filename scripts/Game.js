@@ -115,7 +115,7 @@ Game.prototype.preLoadImages = function()
     isOpera = window.navigator.userAgent.indexOf("OPR") > -1,
     isIEedge = window.navigator.userAgent.indexOf("Edge") > -1;
 
-	if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false && isCanvasSupported())
+	if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false)
 	{
 		context.fillStyle = "#fafafa";
 		context.fillRect(0,0,canvas.width,canvas.height);
