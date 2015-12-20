@@ -23,7 +23,7 @@ function Player()
 
     this.maxCharisma = 160;
     this.charisma = this.maxCharisma;
-    this.charismaIncrease = 2;
+    this.charismaIncrease = 5;
 
     this.damage = 50;
     this.strength = 15;
