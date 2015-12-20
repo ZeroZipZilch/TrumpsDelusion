@@ -14,7 +14,7 @@ function Eagle()
 	{
 		console.log(eagleImg);
 		this.context.drawImage(eagleImg, 0, 0);
-		document.body.appendChild(eagleImg);
+		//document.body.appendChild(eagleImg);
 	}
 
 	eagleImg.src = '/eagle.png';
