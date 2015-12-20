@@ -13,7 +13,7 @@ function Eagle()
 	eagleImg.onload = function()
 	{
 		console.log(eagleImg);
-		this.context.drawImage(eagleImg, 0, 0);
+		this.context.drawImage(this.eagleImg, 0, 0);
 		//document.body.appendChild(eagleImg);
 	}
 
