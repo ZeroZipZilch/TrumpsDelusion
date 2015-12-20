@@ -21,7 +21,7 @@ Eagle.prototype.draw = function()
 {
 	if(this.make == true)
 	{
-		context.drawImage(this.canvas, this.point.x, this.point.y);
+		context.drawImage(this.eagleImg, this.point.x, this.point.y);
 	}
 };
 
