@@ -114,7 +114,7 @@ Game.prototype.preLoadImages = function()
     vendorName = window.navigator.vendor,
     isOpera = window.navigator.userAgent.indexOf("OPR") > -1,
     isIEedge = window.navigator.userAgent.indexOf("Edge") > -1;
-    
+
 	if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false)
 	{
 		context.fillStyle = "#fafafa";
@@ -132,6 +132,7 @@ Game.prototype.preLoadImages = function()
 
 		for(i = 0;i < images.length;i++)
 		{
+			console.log(loadingImages);
 			loadingImages.push(new Image());
 			
 			loadingImages[i].onload = function()
