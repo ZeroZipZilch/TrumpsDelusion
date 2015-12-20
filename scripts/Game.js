@@ -109,78 +109,30 @@ Game.prototype.makeBase = function()
 
 Game.prototype.preLoadImages = function()
 {
-	var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-    // Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
-	var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
-	var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-	console.log(isSafari);
-	// At least Safari 3+: "[object HTMLElementConstructor]"
-	var isChrome = !!window.chrome && !isOpera && !isSafari;              // Chrome 1+
-	var isIE = /*@cc_on!@*/false || !!document.documentMode; // At least IE6
-    var isChrome = !!(window.chrome && chrome.webstore);
+	context.fillStyle = "#fafafa";
+	context.fillRect(0,0,canvas.width,canvas.height);
 
-    canvas.width = game.width;
-    canvas.height = game.height;
+	context.font = "15pt Arial";
+	context.fillStyle = "#343434";
+	context.textAlign = 'center';
+	context.textBaseLine = 'middle';
+	context.fillText("Loading game...", canvas.width/2, canvas.height/2);
 
-	var isChromium = window.chrome,
-    vendorName = window.navigator.vendor,
-    isOpera = window.navigator.userAgent.indexOf("OPR") > -1,
-    isIEedge = window.navigator.userAgent.indexOf("Edge") > -1;
+	images = ['/eagle.png', '/pending.png', '/shoot.png', '/ouch.png', '/toupe.png', '/confFlag.jpg', '/mericanFlag.jpg'];
+	loadingImages = [];
+	loadedImages = 0;
 
-	if(isChrome)
+	for(i = 0;i < images.length;i++)
 	{
-		context.fillStyle = "#fafafa";
-		context.fillRect(0,0,canvas.width,canvas.height);
-
-		context.font = "15pt Arial";
-		context.fillStyle = "#343434";
-		context.textAlign = 'center';
-		context.textBaseLine = 'middle';
-		context.fillText("Loading game...", canvas.width/2, canvas.height/2);
-
-		images = ['/eagle.png', '/pending.png', '/shoot.png', '/ouch.png', '/toupe.png', '/confFlag.jpg', '/mericanFlag.jpg'];
-		loadingImages = [];
-		loadedImages = 0;
-
-		for(i = 0;i < images.length;i++)
+		loadingImages.push(new Image());
+		
+		loadingImages[i].onload = function()
 		{
-			loadingImages.push(new Image());
-			
-			loadingImages[i].onload = function()
-			{
-				loadedImages++;
-				if(loadedImages == images.length)
-					game.init();
-			}
+			loadedImages++;
+			if(loadedImages == images.length)
+				game.init();
+		}
 
-			loadingImages[i].src = images[i];
-		} 
+		loadingImages[i].src = images[i];
 	}
-	else if(!isSafari)
-	{ 
-   		context.fillStyle = "#fafafa";
-		context.fillRect(0,0,canvas.width,canvas.height);
-
-		context.font = "15pt Arial";
-		context.fillStyle = "#343434";
-		context.textAlign = 'center';
-		context.textBaseLine = 'middle';
-		context.fillText("Sorry... Due to Google Chrome being the only cool browser that handles", canvas.width/2, canvas.height/2);
-		context.fillText("HTML 5 canvas relatively well, we decided to drop support for all other browsers.", canvas.width/2, canvas.height/2 + 20);
-
-	}
-	else
-	{
-		$("#noSupport").show();
-	}
-
-	if(!this.isCanvasSupported())
-	{
-		$("#noSupport").show();
-	}
-}
-
-Game.prototype.isCanvasSupported = function()
-{
-	return !!(canvas.getContext && canvas.getContext('2d'));
 }
