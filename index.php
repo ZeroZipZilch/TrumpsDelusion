@@ -23,6 +23,8 @@
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     
+    <script src="/scripts/variables.js"></script>
+
     <script>
       $(function()
       {  
@@ -72,8 +74,6 @@
         }
     });
     </script>
-
-    <script src="/scripts/variables.js"></script>
 
     <script src="/scripts/Input.js"></script>  
     <script src="/scripts/Player.js"></script>
