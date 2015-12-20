@@ -8,7 +8,7 @@ function Eagle()
 	this.canvas.height = this.scale.y;
 	this.context = this.canvas.getContext('2d');
 
-	this.eagleImg = new Image();
+	var this.eagleImg = new Image();
 
 	this.eagleImg.onload = function()
 	{
