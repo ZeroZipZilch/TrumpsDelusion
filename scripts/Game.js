@@ -168,7 +168,7 @@ Game.prototype.preLoadImages = function()
 
 	}
 
-	if(isSafari)
+	if(!this.isCanvasSupported())
 	{
 		$("#noSupport").show();
 	}
