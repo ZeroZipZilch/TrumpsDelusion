@@ -21,7 +21,7 @@ function Player()
     this.maxSanity = 1000;
     this.sanity = this.maxSanity;
 
-    this.maxCharisma = 80;
+    this.maxCharisma = 160;
     this.charisma = this.maxCharisma;
     this.charismaIncrease = 2;
 
@@ -35,7 +35,7 @@ function Player()
     this.abilitiesCD = {platform: 2, argument: 1.5, epicArgument:8, steelPlatform: 9};
     this.abilitiesLevel = {platform: 1, argument: 1, epicArgument:5, steelPlatform: 9};
     this.activeCD = {platform:0, argument: 0, epicArgument:0, steelPlatform: 0};
-    this.abilitiesCharismaCost = {platform:10, argument: 1, epicArgument:20, steelPlatform: 50};
+    this.abilitiesCharismaCost = {platform:5, argument: 1, epicArgument:20, steelPlatform: 50};
 
     this.color = "#4C98C9";
     this.colorTimer = 0;
