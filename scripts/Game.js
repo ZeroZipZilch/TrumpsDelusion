@@ -14,6 +14,8 @@ function Game()
 
 Game.prototype.init = function()
 {
+	$("#confFlag").show();
+	$("#mericanFlag").show();
 	canvas.width = this.width;
     canvas.height = this.height;
 
@@ -107,6 +109,14 @@ Game.prototype.makeBase = function()
 
 Game.prototype.preLoadImages = function()
 {
+	var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+    // Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
+	var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
+	var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+	// At least Safari 3+: "[object HTMLElementConstructor]"
+	var isChrome = !!window.chrome && !isOpera;              // Chrome 1+
+	var isIE = /*@cc_on!@*/false || !!document.documentMode; // At least IE6
+    
     canvas.width = game.width;
     canvas.height = game.height;
 
@@ -115,7 +125,7 @@ Game.prototype.preLoadImages = function()
     isOpera = window.navigator.userAgent.indexOf("OPR") > -1,
     isIEedge = window.navigator.userAgent.indexOf("Edge") > -1;
 
-	if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false)
+	if(isChrome && this.isCanvasSupported())
 	{
 		context.fillStyle = "#fafafa";
 		context.fillRect(0,0,canvas.width,canvas.height);
@@ -161,6 +171,5 @@ Game.prototype.preLoadImages = function()
 
 Game.prototype.isCanvasSupported = function()
 {
-	var elem = document.createElement('canvas');
-	return !!(elem.getContext && elem.getContext('2d'));
+	return !!(canvas.getContext && canvas.getContext('2d'));
 }
