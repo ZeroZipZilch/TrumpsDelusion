@@ -12,14 +12,13 @@
     <link rel="stylesheet" href="/styles/allODemStyles.css">
   </head>
   <body>
-    <div id="confFlag"></div>
-    <div id="mericanFlag"></div>
-    <canvas id="daCanvas"></canvas>
-    
     <div id="noSupport">
       Sorry... Due to Google Chrome being the only cool browser that handles<br />
       HTML 5 canvas relatively well, we decided to drop support for all other browsers.
     </div>
+    <div id="confFlag"></div>
+    <div id="mericanFlag"></div>
+    <canvas id="daCanvas"></canvas>
 
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
