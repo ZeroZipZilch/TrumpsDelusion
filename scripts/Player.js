@@ -32,10 +32,10 @@ function Player()
     this.exp = 0;
     this.nextLevel = 700;
 
-    this.abilitiesCD = {platform: 3, argument: 1, epicArgument:8, steelPlatform: 9};
+    this.abilitiesCD = {platform: 0, argument: 1, epicArgument:8, steelPlatform: 9};
     this.abilitiesLevel = {platform: 1, argument: 1, epicArgument:5, steelPlatform: 9};
     this.activeCD = {platform:0, argument: 0, epicArgument:0, steelPlatform: 0};
-    this.abilitiesCharismaCost = {platform:10, argument: 1, epicArgument:20, steelPlatform: 50};
+    this.abilitiesCharismaCost = {platform:0, argument: 1, epicArgument:20, steelPlatform: 50};
 
     this.color = "#4C98C9";
     this.colorTimer = 0;
