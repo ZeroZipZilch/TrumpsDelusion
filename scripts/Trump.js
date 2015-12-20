@@ -10,10 +10,10 @@ function Trump()
 
 	this.color = "#343434";
 
-	this.pending = "pending.png";
-	this.shoot = "shoot.png";
-	this.ouch = "ouch.png";
-	this.toupe = "toupe.png";
+	this.pending = "/pending.png";
+	this.shoot = "/shoot.png";
+	this.ouch = "/ouch.png";
+	this.toupe = "/toupe.png";
 
 	this.face = "pending";
 
