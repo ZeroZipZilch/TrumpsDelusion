@@ -107,6 +107,10 @@ Game.prototype.makeBase = function()
 
 Game.prototype.preLoadImages = function()
 {
+	context.fillStyle = "#fafafa";
+	context.fillRect(0,0,canvas.width,canvas.height);
+
+	context.fillStyle = "#343434";
 	context.textAlign = 'center';
 	context.textBaseLine = 'middle';
 	context.fillText("Loading game...", canvas.width/2, canvas.height/2);
