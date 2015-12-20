@@ -1,0 +1,39 @@
+<script> 
+	window.onload = function()
+	{
+		//canvas = document.getElementById('canvas');
+		//context = canvas.getContext('2d');
+
+		points = [];
+
+		for(var n = 0;n < 100000;n++)
+		{
+			// Google for anything else
+			//SQRT = Math.sqrt()
+			//EXPONENT = Math.pow(number, power)
+			//LOG = Math.log(number)
+
+			// Equation here
+			EQUATION1 = (Math.pow(-2,n) / Math.pow(-2 + 1, n));
+			EQUATION2 = (Math.pow(2,n) / Math.pow(2 + 1, n));
+			// Nothing else is needed
+
+			points.push({a:EQUATION1, b:EQUATION2});
+		}
+
+		for(var i = 0;i < points.length;i++)
+		{
+			document.writeln("n: "+i+"| "+points[i].a + " | " + points[i].b + "<br />");
+		}
+	}
+
+	var f = [];
+	function factorial (n)
+	{
+	  if (n == 0 || n == 1)
+	    return 1;
+	  if (f[n] > 0)
+	    return f[n];
+	  return f[n] = factorial(n-1) * n;
+	} 
+</script>
