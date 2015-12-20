@@ -337,7 +337,7 @@ Player.prototype.onLevelUp = function()
         break;
         case 6:
             this.arguments.push({argument:"Feeling", damage:13});
-            popup.set("You have leveled up! ;: You have learned to forward arguments that are not only logical or reasonable, but also enthusiastic.", "dropdown", false);
+            popup.set("You have leveled up! ;: You have learned to make arguments that are not only logical or reasonable, but also enthusiastic.", "dropdown", false);
         break;
         case 7:
             this.epicArguments.push({argument:"Welfare Funding", damage:5});
