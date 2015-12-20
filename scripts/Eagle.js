@@ -12,11 +12,12 @@ function Eagle()
 
 	this.eagleImg.onload = function()
 	{
+		console.log(this.eagleImg);
 		document.body.appendChild(this.eagleImg);
 		this.context.drawImage(this.eagleImg, 0, 0);
 	}
 
-	this.eagleImg.src = 'http://trump.valiant.ninja/eagle.png';
+	this.eagleImg.src = '/eagle.png';
 
 	this.make = false;
 	this.down = true;
