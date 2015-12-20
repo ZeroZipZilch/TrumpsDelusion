@@ -9,13 +9,13 @@ function Eagle()
 	this.context = this.canvas.getContext('2d');
 
 	this.eagleImg = new Image();
-	
+
 	this.eagleImg.onload = function()
 	{
 		this.context.drawImage(this.eagleImg, 0, 0);
 	}
 
-	this.eagleImg.src = 'eagle.png';
+	this.eagleImg.src = '/eagle.png';
 
 	this.make = false;
 	this.down = true;
