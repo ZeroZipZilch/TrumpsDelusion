@@ -110,11 +110,22 @@ Game.prototype.preLoadImages = function()
 	context.textAlign = 'center';
 	context.textBaseLine = 'middle';
 	context.fillText("Loading game...", canvas.width/2, canvas.height/2);
-	
-	images = ['/pending.png', '/shoot.png', '/ouch.png', '/toupe.png', '/confFlag.png', '/mericanFlag.png'];
+
+	images = ['/pending.png', '/shoot.png', '/ouch.png', '/toupe.png', '/confFlag.jpg', '/mericanFlag.jpg'];
+	loadingImages = [];
+	loadedImages = 0;
 
 	for(i = 0;i < images.length;i++)
-		(new Image()).src = images[i];
+	{
+		loadingImages.push(new Image());
+		
+		loadingImages[i].onload = function()
+		{
+			loadedImages++;
+			if(loadedImages == images.length)
+				game.init();
+		}
 
-	this.init();
+		loadingImages[i].src = images[i];
+	}
 }
