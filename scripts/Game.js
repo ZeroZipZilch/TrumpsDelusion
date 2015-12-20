@@ -107,32 +107,54 @@ Game.prototype.makeBase = function()
 
 Game.prototype.preLoadImages = function()
 {
-	canvas.width = game.width;
+    canvas.width = game.width;
     canvas.height = game.height;
 
-	context.fillStyle = "#fafafa";
-	context.fillRect(0,0,canvas.width,canvas.height);
-
-	context.fillStyle = "#343434";
-	context.textAlign = 'center';
-	context.textBaseLine = 'middle';
-	context.fillText("Loading game...", canvas.width/2, canvas.height/2);
-
-	images = ['/eagle.png', '/pending.png', '/shoot.png', '/ouch.png', '/toupe.png', '/confFlag.jpg', '/mericanFlag.jpg'];
-	loadingImages = [];
-	loadedImages = 0;
-
-	for(i = 0;i < images.length;i++)
+	var isChromium = window.chrome,
+    vendorName = window.navigator.vendor,
+    isOpera = window.navigator.userAgent.indexOf("OPR") > -1,
+    isIEedge = window.navigator.userAgent.indexOf("Edge") > -1;
+    
+	if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false)
 	{
-		loadingImages.push(new Image());
-		
-		loadingImages[i].onload = function()
-		{
-			loadedImages++;
-			if(loadedImages == images.length)
-				game.init();
-		}
+		context.fillStyle = "#fafafa";
+		context.fillRect(0,0,canvas.width,canvas.height);
 
-		loadingImages[i].src = images[i];
+		context.font = "15pt Arial";
+		context.fillStyle = "#343434";
+		context.textAlign = 'center';
+		context.textBaseLine = 'middle';
+		context.fillText("Loading game...", canvas.width/2, canvas.height/2);
+
+		images = ['/eagle.png', '/pending.png', '/shoot.png', '/ouch.png', '/toupe.png', '/confFlag.jpg', '/mericanFlag.jpg'];
+		loadingImages = [];
+		loadedImages = 0;
+
+		for(i = 0;i < images.length;i++)
+		{
+			loadingImages.push(new Image());
+			
+			loadingImages[i].onload = function()
+			{
+				loadedImages++;
+				if(loadedImages == images.length)
+					game.init();
+			}
+
+			loadingImages[i].src = images[i];
+		} 
+	}
+	else
+	{ 
+   		context.fillStyle = "#fafafa";
+		context.fillRect(0,0,canvas.width,canvas.height);
+
+		context.font = "15pt Arial";
+		context.fillStyle = "#343434";
+		context.textAlign = 'center';
+		context.textBaseLine = 'middle';
+		context.fillText("Sorry... Due to Google Chrome being the only cool browser that handles", canvas.width/2, canvas.height/2);
+		context.fillText("HTML 5 canvas relatively well, we decided to drop support for all other browsers.", canvas.width/2, canvas.height/2 + 20);
+
 	}
 }
