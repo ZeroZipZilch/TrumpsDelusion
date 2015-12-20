@@ -107,6 +107,9 @@ Game.prototype.makeBase = function()
 
 Game.prototype.preLoadImages = function()
 {
+	canvas.width = game.width;
+    canvas.height = game.height;
+
 	context.fillStyle = "#fafafa";
 	context.fillRect(0,0,canvas.width,canvas.height);
 
