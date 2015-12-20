@@ -22,7 +22,8 @@ canvas {
   background: url("/confFlag.jpg");
   height: 100%;
   width: 100%;
-  background-size: 100% 100%; }
+  background-size: 100% 100%;
+  display: none; }
 
 #mericanFlag {
   position: absolute;
@@ -33,6 +34,14 @@ canvas {
   height: 100%;
   width: 100%;
   background-size: 100% 100%;
-  opacity: 1; }
+  opacity: 1;
+  display: none; }
+
+#noSupport {
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 100px; }
 
 /*# sourceMappingURL=allODemStyles.css.map */
