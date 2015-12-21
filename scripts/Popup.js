@@ -28,7 +28,7 @@ Popup.prototype.dropdown = function()
 {
 	context.beginPath();
 		context.fillStyle = this.bg;
-		context.fillRect(game.width / 2 - 300, 0, 600, 200);
+		context.fillRect(game.width / 2 - 300, game.height - game.ground.scale.y - 200, 600, 200);
 		context.fillStyle = "#fafafa";
 		context.font = "15pt Arial";
 		this.phraseArray = this.getLines(context, this.phrase, 580)
