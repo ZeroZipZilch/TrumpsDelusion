@@ -42,7 +42,7 @@ Popup.prototype.dropdown = function()
 			else
 				lineheight += 30;
 
-			context.fillText(this.phraseArray[i], game.width / 2 - 290, lineheight + 15);
+			context.fillText(this.phraseArray[i], game.width / 2 - 290, game.height - game.ground.scale.y - 200 + lineheight + 15);
 		}
 	context.closePath();
 };
