@@ -82,7 +82,7 @@ Game.prototype.loop = function()
 	if(input.isDown(input.keys.P))
 	{
 		this.state = 'paused';
-		popup.set("The game has been paused. ;: For more information about us, visit http://www.valiant.ninja ;: Twitter @ valiant_ninja ;: [Press Enter to resume game]", 'full', false)
+		popup.set("The game has been paused. ;: For more information about us, visit http://www.valiant.ninja ;: Twitter @ valiant_ninja ;: Copyright &copy; Valiant Ninja ;: [Press Enter to resume game]", 'full', false)
 	}
 
 	if(input.isDown(input.keys.H))
