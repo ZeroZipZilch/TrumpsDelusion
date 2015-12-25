@@ -82,7 +82,13 @@ Game.prototype.loop = function()
 	if(input.isDown(input.keys.P))
 	{
 		this.state = 'paused';
-		popup.set("The game has been paused. ;: For more information about us, visit http://www.valiant.ninja ;: Twitter @ valiant_ninja ;: © Valiant Ninja, 2015 ;: [Press Enter to resume game]", 'full', false)
+		popup.set("The game has been paused. ;: Press U to go to our donation page and help us keep going ;: For more information about us, visit http://www.valiant.ninja ;: Twitter @ valiant_ninja ;: © Valiant Ninja, 2015 ;: [Press Enter to resume game]", 'full', false);
+	}
+
+	if(input.isDown(input.keys.U))
+	{
+		var win = window.open("http://valiant.ninja/#donate", '_blank');
+		win.focus();
 	}
 
 	if(input.isDown(input.keys.H))
@@ -117,6 +123,8 @@ Game.prototype.preLoadImages = function()
 	context.textAlign = 'center';
 	context.textBaseLine = 'middle';
 	context.fillText("Loading game...", canvas.width/2, canvas.height/2);
+
+	popup.set("Welcome to Trumps Delusion. Defeat Trump with common sense and reasonable arguments. ;: Use the left and right arrow keys to move around and jump with the space bar. Use Z, X, C and V to use your abilities. ;: You'll gain the C and V abilities on level 5 and 9. Use Z to create platforms while in the air and reach up to Trump, and X to argument against his face. ;: [Press Enter to continue]", 'full', false);
 
 	images = ['/eagle.png', '/pending.png', '/shoot.png', '/ouch.png', '/toupe.png', '/confFlag.jpg', '/mericanFlag.jpg'];
 	loadingImages = [];
