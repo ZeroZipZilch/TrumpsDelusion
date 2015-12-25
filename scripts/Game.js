@@ -85,16 +85,14 @@ Game.prototype.loop = function()
 		popup.set("The game has been paused. ;: Press U to go to our donation page and help us keep going ;: For more information about us, visit http://www.valiant.ninja ;: Twitter @ valiant_ninja ;: © Valiant Ninja, 2015 ;: [Press Enter to resume game]", 'full', false);
 	}
 
-	if(input.isDown(input.keys.U))
+	$('.canvas').on('keypress', function()
 	{
-		$('.donate').trigger('click');
-
-		$('.donate').on('click', function()
+		if(input.isDown(input.keys.U))
 		{
 			var win = window.open("http://valiant.ninja/#donate", '_blank');
   			win.focus();
-		});
-	}
+		}
+	});
 
 	if(input.isDown(input.keys.H))
 	{
