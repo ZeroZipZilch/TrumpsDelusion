@@ -88,7 +88,10 @@ Game.prototype.loop = function()
 	$(document).keypress(function(e)
 	{
 		if(e.which == 117)
-		{
+		{	
+			this.state = 'paused';
+			popup.set("The game has been paused. ;: Press U to go to our donation page and help us keep going ;: For more information about us, visit http://www.valiant.ninja ;: Twitter @ valiant_ninja ;: © Valiant Ninja, 2015 ;: [Press Enter to resume game]", 'full', false);
+			
 			window.open("http://valiant.ninja/#donate", '_blank');
   		}
 	});
