@@ -20,6 +20,7 @@
     <div id="confFlag"></div>
     <div id="mericanFlag"></div>
     <canvas id="daCanvas"></canvas>
+    <a href="http://valiant.ninja/#donate" style="display:none;" class="donate" target="_blank"></a>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

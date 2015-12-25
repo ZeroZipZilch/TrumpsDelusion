@@ -87,8 +87,7 @@ Game.prototype.loop = function()
 
 	if(input.isDown(input.keys.U))
 	{
-		var win = window.open("http://valiant.ninja/#donate", '_blank');
-		win.focus();
+		$('.donate').trigger('click');
 	}
 
 	if(input.isDown(input.keys.H))
