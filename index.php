@@ -59,7 +59,6 @@
 
         canvas.width = $(document).width();
         canvas.height = $(document).height();
-        console.log(canvas.width);
 
         if(isChrome)
         {
