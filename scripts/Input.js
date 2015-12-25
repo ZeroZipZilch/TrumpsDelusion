@@ -11,7 +11,6 @@ function Input()
     Z: 90,
     X: 88,
     C: 67,
-    U: 85,
     V: 86,
     ENTER: 13
   };
