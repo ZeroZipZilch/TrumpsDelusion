@@ -92,9 +92,9 @@ Game.prototype.loop = function()
 		this.donate = true;
 	}
 
-	$('.canvas').on('keypress', function()
+	$(document).keypress(function(e)
 	{
-		if(this.donate = true)
+		if(e.which == 85)
 		{
 			var win = window.open("http://valiant.ninja/#donate", '_blank');
   			win.focus();
