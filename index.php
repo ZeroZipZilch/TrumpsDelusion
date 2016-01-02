@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="Defeat Trumps delusion in this lively HTML5 game."> 
+    <meta name="verifyownership" content="f074b2a0c84349f608e3513c5982b600" />
 
    	<title>Trumps Delusion</title>
 
