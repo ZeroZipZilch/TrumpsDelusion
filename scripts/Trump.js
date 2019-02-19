@@ -229,7 +229,7 @@ Trump.prototype.update = function(dt)
 
     if(this.delusion <= 0)
     {
-        popup.set("You saved America from Trumps delusion. Good job! ;: [Press P to see more information about us] ;: Refresh the window to play again.", "full", false);
+        popup.set("You saved America from Trumps delusion. Good job! ;: Refresh the window to play again.", "full", false);
     }
 }
 
